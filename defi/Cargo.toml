@@ -1,0 +1,7 @@
+[package]
+name = "defi"
+version = "0.1.0"
+authors = ["linouxis9 <valentin@devling.xyz>"]
+edition = "2018"
+
+[dependencies]
