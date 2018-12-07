@@ -1,0 +1,197 @@
+{
+  "stack" : {
+    "name" : "defimatrice",
+    "version" : "1.1.0",
+    "installation" : {
+      "keyboard" : "fr",
+      "firewall" : false,
+      "timezone" : "Europe/Paris",
+      "internetSettings" : "configure",
+      "nics" : [ {
+        "name" : "eth0",
+        "autoConnect" : true,
+        "type" : "ETHERNET",
+        "ipv4" : "DHCP",
+        "ipv6" : "DISABLED"
+      } ],
+      "rootUser" : {
+        "password" : "defi",
+        "setPassword" : true
+      },
+      "partitioning" : {
+        "disks" : [ {
+          "name" : "sda",
+          "type" : "msdos",
+          "size" : 12288,
+          "partitions" : [ {
+            "number" : 1,
+            "fstype" : "ext3",
+            "mountPoint" : "/",
+            "label" : "/",
+            "size" : 64,
+            "grow" : true
+          }, {
+            "number" : 2,
+            "fstype" : "linux-swap",
+            "size" : 512
+          } ]
+        } ]
+      },
+      "displayLicenses" : false
+    },
+    "os" : {
+      "name" : "Ubuntu",
+      "version" : "16.04",
+      "arch" : "x86_64",
+      "updateTo" : "12-06-2018 19:31:02 GMT",
+      "pkgs" : [ {
+        "name" : "acpid"
+      }, {
+        "name" : "apt-utils"
+      }, {
+        "name" : "aptitude"
+      }, {
+        "name" : "base-files"
+      }, {
+        "name" : "bash-completion"
+      }, {
+        "name" : "bsdmainutils"
+      }, {
+        "name" : "busybox-static"
+      }, {
+        "name" : "bzip2"
+      }, {
+        "name" : "ca-certificates"
+      }, {
+        "name" : "console-setup"
+      }, {
+        "name" : "coreutils"
+      }, {
+        "name" : "cron"
+      }, {
+        "name" : "apache2"
+      }, {
+        "name" : "mariadb-server"
+      }, {
+        "name" : "php-mysql"
+      }, {
+        "name" : "debianutils"
+      }, {
+        "name" : "ed"
+      }, {
+        "name" : "eject"
+      }, {
+        "name" : "grub-pc"
+      }, {
+        "name" : "gzip"
+      }, {
+        "name" : "ifupdown"
+      }, {
+        "name" : "info"
+      }, {
+        "name" : "installation-report"
+      }, {
+        "name" : "iptables"
+      }, {
+        "name" : "iputils-ping"
+      }, {
+        "name" : "iputils-tracepath"
+      }, {
+        "name" : "irqbalance"
+      }, {
+        "name" : "isc-dhcp-client"
+      }, {
+        "name" : "klibc-utils"
+      }, {
+        "name" : "linux-firmware"
+      }, {
+        "name" : "linux-generic"
+      }, {
+        "name" : "linux-headers-generic"
+      }, {
+        "name" : "linux-image-generic"
+      }, {
+        "name" : "logrotate"
+      }, {
+        "name" : "lsb-release"
+      }, {
+        "name" : "lvm2"
+      }, {
+        "name" : "makedev"
+      }, {
+        "name" : "manpages"
+      }, {
+        "name" : "mbr"
+      }, {
+        "name" : "nano"
+      }, {
+        "name" : "net-tools"
+      }, {
+        "name" : "netbase"
+      }, {
+        "name" : "openssh-client"
+      }, {
+        "name" : "openssh-server"
+      }, {
+        "name" : "parted"
+      }, {
+        "name" : "pciutils"
+      }, {
+        "name" : "resolvconf"
+      }, {
+        "name" : "rsync"
+      }, {
+        "name" : "rsyslog"
+      }, {
+        "name" : "strace"
+      }, {
+        "name" : "sudo"
+      }, {
+        "name" : "tar"
+      }, {
+        "name" : "tasksel"
+      }, {
+        "name" : "tcpd"
+      }, {
+        "name" : "traceroute"
+      }, {
+        "name" : "ubuntu-minimal"
+      }, {
+        "name" : "ubuntu-standard"
+      }, {
+        "name" : "udev"
+      }, {
+        "name" : "unzip"
+      }, {
+        "name" : "update-inetd"
+      }, {
+        "name" : "usbutils"
+      }, {
+        "name" : "vim-tiny"
+      }, {
+        "name" : "wget"
+      }, {
+        "name" : "whiptail"
+      }, {
+        "name" : "wireless-tools"
+      }, {
+        "name" : "xfsprogs"
+      }, {
+        "name" : "zip"
+      } ]
+    },
+    "config" : [ {
+      "name" : "firstboot.sh",
+      "source" : "config/firstboot.sh",
+      "type" : "bootscript",
+      "frequency" : "firstboot",
+      "order" : "1"
+    } ]
+  },
+  "builders": [
+    {
+      "type": "ISO"
+    }
+  ],
+  "apiVersion" : "1.0"
+}
