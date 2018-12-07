@@ -5,3 +5,7 @@ authors = ["linouxis9 <valentin@devling.xyz>"]
 edition = "2018"
 
 [dependencies]
+clap = "*"
+tar = "*"
+flate2 = "*"
+regex = "*"
